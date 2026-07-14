@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nathan Velázquez Sánchez — CV</title>
+
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Tu CSS -->
+  <link href="componentes/styles.css" rel="stylesheet" />
+
+  <meta name="description" content="CV digital de Nathan Velázquez Sánchez, Ingeniero en Sistemas y Comunicaciones.">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#cvNav" data-bs-smooth-scroll="true">
+
+  <!-- Flecha Back-to-top -->
+  <button id="btn-top" class="btn btn-primary shadow-lg" aria-label="Volver arriba" title="Volver arriba">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- HERO -->
+  <header id="section-hero" class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-lg-7" data-aos="fade-right">
+          <h1 class="display-5 fw-bold text-dark mb-1">Nathan Velázquez Sánchez</h1>
+          <p class="lead mb-3 text-accent">Ingeniero en Sistemas y Comunicaciones</p>
+          <ul class="list-unstyled text-secondary small mb-0">
+            <li class="mb-1"><i class="bi bi-geo-alt me-2 text-accent"></i>Nicolás Romero, Estado de México</li>
+            <li class="mb-1"><i class="bi bi-telephone me-2 text-accent"></i><a class="link-body-emphasis" href="tel:+525526612841">+52 55 2661 2841</a></li>
+            <li class="mb-1"><i class="bi bi-envelope me-2 text-accent"></i><a class="link-body-emphasis" href="mailto:nathanvelazquez1@outlook.com">nathanvelazquez1@outlook.com</a></li>
+            <li class="mb-1"><i class="bi bi-linkedin me-2 text-accent"></i><a class="link-body-emphasis" href="https://www.linkedin.com/in/nathan-velazquez-906674280/" target="_blank" rel="noopener">linkedin.com/in/nathan-velazquez</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-lg-5" data-aos="fade-left">
+          <div class="photo-frame mx-auto">
+            <img src="componentes/imgs/N.jpg" alt="Foto de perfil de Nathan"
+                 onerror="this.src='https://dummyimage.com/600x600/f3f6fb/0d6efd&text=Foto';">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- Presentación -->
+    <section id="section-about" class="mb-4" data-aos="fade-up">
+      <div class="card soft-card">
+        <div class="card-body">
+          <h2 class="h4 mb-3"><i class="bi bi-person-lines-fill me-2 text-accent"></i>Presentación</h2>
+          <p class="mb-0 text-secondary">
+            Ingeniero en Sistemas y Comunicaciones con experiencia en
+            <strong>desarrollo de software a medida</strong>, <strong>automatización de procesos</strong> y
+            <strong>bases de datos SQL/SQL Server</strong>. Configuro redes (routers, switches, <strong>VLANs</strong>,
+            <strong>VPN</strong>, subnetting), documento proyectos y coordino instalaciones (<strong>CCTV</strong>,
+            videowalls, audio/video). Integro <strong>Power BI</strong>, <strong>Git/GitHub</strong> y buenas prácticas de documentación
+            para entregar soluciones confiables y mantenibles.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Acciones rápidas -->
+    <section id="section-quick" class="mb-5" data-aos="fade-up" data-aos-delay="50">
+      <h2 class="h5 mb-3"><i class="bi bi-send-check me-2 text-accent"></i>Acciones rápidas</h2>
+      <div class="quick-actions p-3">
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-5 g-3">
+          <div class="col">
+            <a id="btn-whatsapp" class="action-btn h-100" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp"></i><span>WhatsApp</span>
+            </a>
+          </div>
+          <div class="col">
+            <a id="btn-email" class="action-btn h-100" href="mailto:nathanvelazquez1@outlook.com?subject=Contacto%20CV&body=Hola%20Nathan%2C%20te%20escribo%20desde%20tu%20CV%20digital.">
+              <i class="bi bi-envelope"></i><span>Correo</span>
+            </a>
+          </div>
+          <div class="col">
+            <a id="btn-linkedin" class="action-btn h-100" href="https://www.linkedin.com/in/nathan-velazquez-906674280/" target="_blank" rel="noopener">
+              <i class="bi bi-linkedin"></i><span>LinkedIn</span>
+            </a>
+          </div>
+          <div class="col">
+            <a id="btn-CV" class="action-btn h-100" href="componentes/certficados/CV Nathan.pdf" target="_blank">
+              <i class="bi bi-file-earmark-arrow-down"></i><span>Imprimir/Guardar PDF</span>
+            </a>
+          </div>
+          <div class="col">
+            <a id="btn-vcard" class="action-btn h-100" href="#" role="button">
+              <i class="bi bi-person-vcard"></i><span>Guardar contacto</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="row g-4">
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="col-12 col-lg-8">
+
+        <!-- Experiencia -->
+        <section id="section-experience" class="mb-5" data-aos="fade-up">
+          <h2 class="h4 mb-3"><i class="bi bi-briefcase-fill me-2 text-accent"></i>Experiencia profesional</h2>
+
+          <!-- IT&Dom Solutions -->
+          <article class="card exp-card mb-3">
+            <div class="card-body">
+              <img class="exp-logo" src="componentes/imgs/itdom.png" alt="IT&Dom Solutions" onerror="this.style.display='none'">
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                <div>
+                  <h3 class="h6 mb-1">Ingeniero Jr. en Sistemas — IT&Dom Solutions</h3>
+                  <div class="text-muted small">Ago 2024 – Presente · Tlalnepantla / Nicolás Romero, Méx.</div>
+                </div>
+              </div>
+              <ul class="mt-3 mb-0">
+                <li><strong>Software a medida</strong>: paneles internos, formularios, scripts de automatización.</li>
+                <li><strong>SQL/SQL Server</strong>: modelado, normalización, consultas, permisos y reportes.</li>
+                <li><strong>Redes</strong>: routers/switches, <strong>VLANs</strong>, <strong>VPN</strong>, subnetting; pruebas y hardening básico.</li>
+                <li><strong>CCTV / Videowalls / AV</strong>: instalación, configuración y validación de señal.</li>
+                <li><strong>Soporte TI</strong>: diagnóstico, mantenimiento, inventario y documentación.</li>
+                <li><strong>Documentación</strong>: memorias técnicas, manuales, evidencias y entregables.</li>
+                <li><strong>Modelado 3D / Planos</strong> (AutoCAD, 3ds Max) para propuestas previas.</li>
+                <li><strong>Power BI</strong> y <strong>Git/GitHub</strong> para métricas y versionado.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- UAEM Centro de Cómputo -->
+          <article class="card exp-card mb-3">
+            <div class="card-body">
+              <img class="exp-logo" src="componentes/imgs/uaem.png" alt="UAEM" onerror="this.style.display='none'">
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                <div>
+                  <h3 class="h6 mb-1">Servicio Social — UAEM (Centro de Cómputo)</h3>
+                  <div class="text-muted small">Sep 2023 – May 2024 · Nicolás Romero, Méx.</div>
+                </div>
+              </div>
+              <ul class="mt-3 mb-0">
+                <li>Infraestructura física y lógica desde cero del centro de cómputo.</li>
+                <li>Configuración de routers, switches y APs con políticas básicas.</li>
+                <li>Desarrollo de sistema de gestión para laboratorios y recursos.</li>
+                <li>Mantenimiento preventivo/correctivo y cableado estructurado.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Mentor Académico -->
+          <article class="card exp-card">
+            <div class="card-body">
+              <img class="exp-logo" src="componentes/imgs/mentor.png" alt="Mentor Académico" onerror="this.style.display='none'">
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                <div>
+                  <h3 class="h6 mb-1">Mentor Académico — UAEM</h3>
+                  <div class="text-muted small">Ene 2024 – Jul 2024 · Tlalnepantla, Méx.</div>
+                </div>
+              </div>
+              <ul class="mt-3 mb-0">
+                <li>Acompañamiento a estudiantes en riesgo académico; planes y seguimiento.</li>
+                <li>Talleres de hábitos de estudio y lógica de programación.</li>
+                <li>Reconocimiento institucional por liderazgo y comunicación.</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <!-- Certificados -->
+        <section id="section-certificates" class="mb-5" data-aos="fade-up">
+          <h2 class="h4 mb-3"><i class="bi bi-patch-check-fill me-2 text-accent"></i>Certificados</h2>
+
+          <div id="certCarousel"
+               class="carousel slide cert-carousel soft-card"
+               data-bs-ride="carousel"
+               data-bs-interval="4200"
+               data-bs-pause="false"
+               data-bs-touch="false">
+
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+              <!-- 21 puntos -->
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="1"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="1" aria-label="2"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="2" aria-label="3"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="3" aria-label="4"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="4" aria-label="5"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="5" aria-label="6"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="6" aria-label="7"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="7" aria-label="8"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="8" aria-label="9"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="9" aria-label="10"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="10" aria-label="11"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="11" aria-label="12"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="12" aria-label="13"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="13" aria-label="14"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="14" aria-label="15"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="15" aria-label="16"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="16" aria-label="17"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="17" aria-label="18"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="18" aria-label="19"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="19" aria-label="20"></button>
+              <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="20" aria-label="21"></button>
+            </div>
+
+            <!-- SLIDES -->
+            <div class="carousel-inner">
+
+              <!-- Helper: componente iframePDF -->
+              <!-- Nota: se usa height inline para que funcione sin CSS extra -->
+              <!-- Repite patrón: src + #page=1&zoom=page-width&view=FitH -->
+              <!-- 1 -->
+              <div class="carousel-item active">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/Administrador de la nube.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Administrador de la nube" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/Administrador de la nube.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 2 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/Administrador de servidores.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Administrador de servidores" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/Administrador de servidores.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 3 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/Asesor de servicios de infraestructura en la nube.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Asesor de servicios de infraestructura en la nube" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/Asesor de servicios de infraestructura en la nube.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 4 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/certification-Básicas-de-Audio-para-Reuniones-y-Conferencias.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Básicas de Audio para Reuniones y Conferencias" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/certification-Básicas-de-Audio-para-Reuniones-y-Conferencias.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 5 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/certification-Certificación-de-Sistemas-Integrados-.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Certificación de Sistemas Integrados" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certificados/certification-Certificación-de-Sistemas-Integrados-.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 6 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/certification-Conceptos-Básicos-de-Inalámbricos.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Conceptos Básicos de Inalámbricos" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/certification-Conceptos-Básicos-de-Inalámbricos.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 7 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/certification-Conceptos-básicos-del-diseño-de-la-sala-de-conferencias.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Conceptos básicos del diseño de la sala de conferencias" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/certification-Conceptos-básicos-del-diseño-de-la-sala-de-conferencias.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 8 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/certification-Mejores-prácticas-para-Integrar-sistemas-AV-y-de-TI.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Mejores prácticas para Integrar sistemas AV y de TI" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/certification-Mejores-prácticas-para-Integrar-sistemas-AV-y-de-TI.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 9 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/certification-Portafolio-de-Sistemas-Integrados.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Portafolio de Sistemas Integrados" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/certification-Portafolio-de-Sistemas-Integrados.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 10 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/certification-Redes-para-profesionales-de-audio.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Redes para profesionales de audio" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/certification-Redes-para-profesionales-de-audio.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 11 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/certification-Redes-para-profesionales-de-AV.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Redes para profesionales de AV" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/certification-Redes-para-profesionales-de-AV.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 12 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/Curador de datos.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Curador de datos" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/Curador de datos.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 13 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/Excel.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Excel" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/Excel.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 14 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/Mentores.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Mentores" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/Mentores.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 15 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/soluciones teams yealink.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Soluciones Teams Yealink" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/soluciones teams yealink.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 16 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/teams yealink.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Teams Yealink" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/teams yealink.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 17 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/Tecnico en seguridad informatica.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Técnico en redes IP" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/Tecnico en seguridad informatica.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 18 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/Técnico en seguridad en la nube.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Técnico en seguridad en la nube" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/Técnico en seguridad en la nube.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 19 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/Técnico en seguridad informática (servidores).pdf#page=1&zoom=page-width&view=FitH"
+                    title="Técnico en seguridad informática (servidores)" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/Técnico en seguridad informática (servidores).pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 20 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/Técnico en seguridad informática perimetral.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Técnico en seguridad informática perimetral" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/Técnico en seguridad informática perimetral.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+              <!-- 21 -->
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="componentes/certficados/Tecnico en seguridad informatica.pdf#page=1&zoom=page-width&view=FitH"
+                    title="Técnico en seguridad informática" loading="lazy"
+                    style="width:100%;height:70vh;border:0;background:#fff;"></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <a class="btn btn-primary btn-sm" href="componentes/certficados/Tecnico en seguridad informatica.pdf" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Ver/Descargar
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#certCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#certCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- COLUMNA DERECHA -->
+      <aside class="col-12 col-lg-4">
+
+        <!-- Inglés -->
+        <section id="section-english" class="mb-4" data-aos="fade-left">
+          <div class="card soft-card">
+            <div class="card-body">
+              <h2 class="h6 mb-3"><i class="bi bi-translate me-2 text-accent"></i>Inglés</h2>
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge text-bg-primary badge-pill fs-6">B2</span>
+                <span class="text-muted small">CEFR — Intermedio avanzado</span>
+              </div>
+              <div class="cefr-scale mt-3" aria-hidden="true">
+                <span>A1</span><span>A2</span><span>B1</span><span class="active">B2</span><span>C1</span><span>C2</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="section-skills" class="mb-4" data-aos="fade-left" data-aos-delay="50">
+          <div class="card soft-card">
+            <div class="card-body">
+              <h2 class="h6 mb-3"><i class="bi bi-stars me-2 text-accent"></i>Skills</h2>
+
+              <p class="text-muted small mb-1">Técnicas</p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge rounded-pill text-bg-secondary">Python</span>
+                <span class="badge rounded-pill text-bg-secondary">PHP</span>
+                <span class="badge rounded-pill text-bg-secondary">Java</span>
+                <span class="badge rounded-pill text-bg-secondary">C</span>
+                <span class="badge rounded-pill text-bg-secondary">SQL / SQL Server</span>
+                <span class="badge rounded-pill text-bg-secondary">HTML/CSS/JS</span>
+                <span class="badge rounded-pill text-bg-secondary">Git / GitHub</span>
+                <span class="badge rounded-pill text-bg-secondary">Power BI</span>
+              </div>
+
+              <p class="text-muted small mb-1">Infraestructura y Redes</p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge rounded-pill text-bg-secondary">Routers/Switches</span>
+                <span class="badge rounded-pill text-bg-secondary">VLANs</span>
+                <span class="badge rounded-pill text-bg-secondary">VPN</span>
+                <span class="badge rounded-pill text-bg-secondary">Subnetting</span>
+                <span class="badge rounded-pill text-bg-secondary">CCTV / Videowall</span>
+              </div>
+
+              <p class="text-muted small mb-1">Gestión y Blandas</p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge rounded-pill text-bg-secondary">Gestión de proyectos</span>
+                <span class="badge rounded-pill text-bg-secondary">Metodologías ágiles</span>
+                <span class="badge rounded-pill text-bg-secondary">Documentación técnica</span>
+                <span class="badge rounded-pill text-bg-secondary">Resolución de problemas</span>
+                <span class="badge rounded-pill text-bg-secondary">Comunicación efectiva</span>
+                <span class="badge rounded-pill text-bg-secondary">Trabajo en equipo</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Educación -->
+        <section id="section-education" class="mb-4" data-aos="fade-left" data-aos-delay="100">
+          <div class="card soft-card">
+            <div class="card-body">
+              <h2 class="h6 mb-2"><i class="bi bi-mortarboard me-2 text-accent"></i>Educación</h2>
+              <p class="mb-0 fw-semibold">Ingeniería en Sistemas y Comunicaciones</p>
+              <p class="text-muted small mb-0">Universidad Autónoma del Estado de México (UAEM) · 2021 – Presente</p>
+              <p class="mb-0 text-secondary">Estudiante de último año con enfoque en programación (Java, C, PHP, Python),
+                redes y documentación técnica.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Mapa -->
+        <section id="section-map" class="mb-4" data-aos="fade-left" data-aos-delay="150">
+          <div class="card soft-card">
+            <div class="card-body">
+              <h2 class="h6 mb-3"><i class="bi bi-geo-alt-fill me-2 text-accent"></i>Ubicación</h2>
+              <iframe class="map-embed"
+                src="https://www.google.com/maps?q=Estado%20de%20M%C3%A9xico&output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div class="mt-2">
+                <a id="btn-maps" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">
+                  <i class="bi bi-map me-1"></i>Abrir en Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center text-muted small">
+      © <span id="year"></span> Nathan Velázquez Sánchez · CV Digital
+    </footer>
+  </main>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+  <script>
+    // ===== Config persona =====
+    const person = {
+      givenName: 'Nathan',
+      familyName: 'Velázquez Sánchez',
+      title: 'Ingeniero en Sistemas y Comunicaciones',
+      email: 'nathanvelazquez1@outlook.com',
+      phoneIntl: '525526612841',
+      phone: '+52 55 2661 2841',
+      city: 'Nicolás Romero, Estado de México',
+      linkedin: 'https://www.linkedin.com/in/nathan-velazquez-906674280/',
+      mapsQuery: 'Nicolás Romero, Estado de México'
+    };
+
+    AOS.init({ once: true, duration: 650, easing: 'ease-out-quart' });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Acciones rápidas
+    const waText = encodeURIComponent('Hola Nathan, te contacto desde tu CV digital.');
+    document.getElementById('btn-whatsapp').setAttribute('href', `https://wa.me/${person.phoneIntl}?text=${waText}`);
+    document.getElementById('btn-maps').setAttribute('href', `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(person.mapsQuery)}`);
+
+    // vCard universal (iOS/Android/desktop)
+    function buildVCard(p){
+      return [
+        'BEGIN:VCARD','VERSION:3.0',
+        `N:${p.familyName};${p.givenName};;;`,
+        `FN:${p.givenName} ${p.familyName}`,
+        `TITLE:${p.title}`,
+        `TEL;TYPE=CELL,VOICE:${p.phoneIntl}`,
+        `EMAIL;TYPE=INTERNET:${p.email}`,
+        `URL:${p.linkedin || ''}`,
+        `ADR;TYPE=WORK:;;${p.city};;;;`,
+        'END:VCARD'
+      ].join('\r\n');
+    }
+
+    async function downloadVCardMobileSafe(vcText, filename){
+      try {
+        const file = new File([vcText], filename, { type: 'text/vcard' });
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          await navigator.share({ files: [file], title: 'Contacto', text: 'Guardar contacto' });
+          return;
+        }
+      } catch(_) { /* seguimos */ }
+
+      const isIOS = /iP(hone|od|ad)/i.test(navigator.userAgent);
+      const dataUrl = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcText);
+
+      if (isIOS) {
+        const w = window.open(dataUrl, '_blank');
+        if (!w) window.location.href = dataUrl;
+        return;
+      }
+      const blob = new Blob([vcText], { type: 'text/vcard' });
+      const url  = (window.URL || window.webkitURL).createObjectURL(blob);
+      const a    = document.createElement('a');
+      a.href = url; a.download = filename;
+      document.body.appendChild(a); a.click();
+      setTimeout(() => { (window.URL||window.webkitURL).revokeObjectURL(url); a.remove(); }, 1200);
+    }
+
+    (function setupVCard(){
+      const vbtn = document.getElementById('btn-vcard');
+      if (!vbtn) return;
+      const vcText = buildVCard(person);
+      const fname  = `${person.givenName}_${person.familyName}.vcf`;
+      vbtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        downloadVCardMobileSafe(vcText, fname);
+      }, { passive: false });
+    })();
+
+    // Back to top
+    const btnTop = document.getElementById('btn-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) btnTop.classList.add('show'); else btnTop.classList.remove('show');
+    });
+    btnTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Asegurar autoplay del carrusel
+    const certCarouselEl = document.getElementById('certCarousel');
+    new bootstrap.Carousel(certCarouselEl, { interval: 4200, ride: 'carousel', pause: false, touch: false, wrap: true });
+  </script>
+</body>
+</html>
