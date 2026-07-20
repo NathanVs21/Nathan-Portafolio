@@ -16,7 +16,7 @@
   <link href="componentes/styles.css" rel="stylesheet" />
   <meta name="description" content="CV digital de Nathan Velázquez Sánchez, Ingeniero en Sistemas y Comunicaciones.">
 
-  <!-- Estilos adicionales para las secciones nuevas/mejoradas (nav, certificados en lista, botón de contacto) -->
+  <!-- Estilos adicionales: nav, listado de certificados, botón subir, animaciones continuas -->
   <style>
     #cvNav{
       position: sticky;
@@ -35,6 +35,46 @@
     }
     #cvNav .nav-link.active,
     #cvNav .nav-link:hover{ color: var(--bs-primary, #0d6efd); }
+
+    /* Foto: flotación continua y anillo respirando */
+    .photo-frame{
+      position: relative;
+      animation: floatPhoto 4.5s ease-in-out infinite;
+    }
+    .photo-frame::before{
+      content: "";
+      position: absolute;
+      inset: -8px;
+      border-radius: inherit;
+      border: 2px solid rgba(13,110,253,.35);
+      animation: breatheRing 2.6s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes floatPhoto{
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-8px); }
+    }
+    @keyframes breatheRing{
+      0%, 100% { transform: scale(1);    opacity: .55; }
+      50%      { transform: scale(1.045); opacity: .15; }
+    }
+
+    /* Indicador de estatus "Presente" */
+    .status-dot{
+      display: inline-block;
+      width: .5rem;
+      height: .5rem;
+      border-radius: 50%;
+      background: #2fb344;
+      margin-right: .35rem;
+      position: relative;
+      top: -1px;
+      animation: pulseDot 1.6s ease-in-out infinite;
+    }
+    @keyframes pulseDot{
+      0%, 100% { box-shadow: 0 0 0 0 rgba(47,179,68,.45); }
+      50%      { box-shadow: 0 0 0 5px rgba(47,179,68,0); }
+    }
 
     /* Listado de certificados */
     .cert-list{ list-style: none; margin: 0; padding: 0; }
@@ -65,6 +105,11 @@
       background: rgba(13,110,253,.08);
       color: #0d6efd;
       font-size: 1.15rem;
+      animation: pulseIcon 3.4s ease-in-out infinite;
+    }
+    @keyframes pulseIcon{
+      0%, 100% { box-shadow: 0 0 0 0 rgba(13,110,253,.18); }
+      50%      { box-shadow: 0 0 0 6px rgba(13,110,253,0); }
     }
     .cert-info{ flex: 1 1 auto; min-width: 0; }
     .cert-info .cert-name{
@@ -78,20 +123,50 @@
       white-space: nowrap;
     }
 
-    /* Portafolio destacado */
-    .portfolio-card{
-      background: linear-gradient(135deg, rgba(13,110,253,.06), rgba(13,110,253,.015));
-      border: 1px dashed rgba(13,110,253,.35);
+    /* Botón volver arriba: visibilidad garantizada + flecha en movimiento continuo */
+    #btn-top{
+      position: fixed;
+      right: 1.25rem;
+      bottom: 1.25rem;
+      z-index: 1040;
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: opacity .3s ease, transform .3s ease, visibility .3s;
+    }
+    #btn-top.show{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    #btn-top i{
+      animation: bounceArrow 1.7s ease-in-out infinite;
+    }
+    @keyframes bounceArrow{
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-4px); }
     }
 
     @media (prefers-reduced-motion: reduce){
-      .cert-item{ transition: none; }
+      .photo-frame,
+      .photo-frame::before,
+      .status-dot,
+      .cert-icon,
+      #btn-top i,
+      .cert-item{ animation: none !important; transition: none !important; }
     }
   </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#cvNav" data-bs-smooth-scroll="true">
 
-  <!-- Flecha Back-to-top (animación permanente por CSS) -->
+  <!-- Flecha Back-to-top -->
   <button id="btn-top" class="btn btn-primary shadow-lg" aria-label="Volver arriba" title="Volver arriba">
     <i class="bi bi-arrow-up"></i>
   </button>
@@ -121,7 +196,6 @@
             <li class="mb-1"><i class="bi bi-telephone me-2 text-accent"></i><a class="link-body-emphasis" href="tel:+525526612841">+52 55 2661 2841</a></li>
             <li class="mb-1"><i class="bi bi-envelope me-2 text-accent"></i><a class="link-body-emphasis" href="mailto:nathanvelazquez1@outlook.com">nathanvelazquez1@outlook.com</a></li>
             <li class="mb-1"><i class="bi bi-linkedin me-2 text-accent"></i><a class="link-body-emphasis" href="https://www.linkedin.com/in/nathan-velazquez-906674280" target="_blank" rel="noopener">linkedin.com/in/nathan-velazquez</a></li>
-            <li class="mb-1"><i class="bi bi-globe2 me-2 text-accent"></i><a class="link-body-emphasis" href="https://nathanvs21.github.io/Nathan-Portafolio/" target="_blank" rel="noopener">nathanvs21.github.io/Nathan-Portafolio</a></li>
           </ul>
         </div>
 
@@ -159,26 +233,11 @@
       </div>
     </section>
 
-    <!-- Portafolio destacado -->
-    <section class="mb-5" data-aos="fade-up" data-aos-delay="30">
-      <div class="card portfolio-card soft-card">
-        <div class="card-body d-flex flex-wrap align-items-center justify-content-between gap-3">
-          <div>
-            <h2 class="h6 mb-1"><i class="bi bi-globe2 me-2 text-accent"></i>Portafolio web</h2>
-            <p class="mb-0 text-secondary small">Proyectos, capturas y detalle técnico de mi trabajo en un solo lugar.</p>
-          </div>
-          <a class="btn btn-primary" href="https://nathanvs21.github.io/Nathan-Portafolio/" target="_blank" rel="noopener">
-            <i class="bi bi-box-arrow-up-right me-1"></i>Ver portafolio
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- Acciones rápidas -->
     <section id="section-quick" class="mb-5" data-aos="fade-up" data-aos-delay="50">
       <h2 class="h5 mb-3"><i class="bi bi-send-check me-2 text-accent"></i>Acciones rápidas</h2>
       <div class="quick-actions p-3">
-        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-6 g-3">
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-5 g-3">
           <div class="col">
             <a id="btn-whatsapp" class="action-btn h-100" target="_blank" rel="noopener">
               <i class="bi bi-whatsapp"></i><span>WhatsApp</span>
@@ -195,13 +254,8 @@
             </a>
           </div>
           <div class="col">
-            <a id="btn-portfolio" class="action-btn h-100" href="https://nathanvs21.github.io/Nathan-Portafolio/" target="_blank" rel="noopener">
-              <i class="bi bi-globe2"></i><span>Portafolio</span>
-            </a>
-          </div>
-          <div class="col">
-            <a id="btn-download" class="action-btn h-100">
-              <i class="bi bi-file-earmark-arrow-down"></i><span>Imprimir/Guardar PDF</span>
+            <a id="btn-download" class="action-btn h-100" href="componentes/certficados/CV Nathan.pdf" target="_blank" rel="noopener">
+              <i class="bi bi-file-earmark-arrow-down"></i><span>Guardar CV</span>
             </a>
           </div>
           <div class="col">
@@ -228,7 +282,7 @@
               <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
                 <div>
                   <h3 class="h6 mb-1">Ingeniero Jr. en Sistemas — IT&Dom Solutions</h3>
-                  <div class="text-muted small">Ago 2024 – Presente · Tlalnepantla de Baz, Méx.</div>
+                  <div class="text-muted small"><span class="status-dot" aria-hidden="true"></span>Ago 2024 – Presente · Tlalnepantla de Baz, Méx.</div>
                 </div>
               </div>
               <ul class="mt-3 mb-0">
@@ -657,7 +711,6 @@
       phone: '+52 55 2661 2841',
       city: 'Nicolás Romero, Estado de México',
       linkedin: 'https://www.linkedin.com/in/nathan-velazquez-906674280',
-      website: 'https://nathanvs21.github.io/Nathan-Portafolio/',
       mapsQuery: 'Nicolás Romero, Estado de México'
     };
 
@@ -667,8 +720,8 @@
     // Acciones rápidas
     const waText = encodeURIComponent('Hola Nathan, te contacto desde tu CV digital.');
     document.getElementById('btn-whatsapp').setAttribute('href', `https://wa.me/${person.phoneIntl}?text=${waText}`);
-    document.getElementById('btn-download').addEventListener('click', () => window.print());
     document.getElementById('btn-maps').setAttribute('href', `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(person.mapsQuery)}`);
+    // btn-download ya apunta directo a "componentes/certficados/CV Nathan.pdf" (misma ruta que los certificados)
 
     // ===== vCard: guardar contacto =====
     // En móvil, se entrega el vCard como data URI SIN atributo "download": el navegador
@@ -682,7 +735,6 @@
         `TITLE:${p.title}`,
         `TEL;TYPE=CELL,VOICE:${p.phoneIntl}`,
         `EMAIL;TYPE=INTERNET:${p.email}`,
-        `URL:${p.website}`,
         `item1.URL:${p.linkedin}`,
         `item1.X-ABLabel:LinkedIn`,
         `ADR;TYPE=WORK:;;${p.city};;;;`,
