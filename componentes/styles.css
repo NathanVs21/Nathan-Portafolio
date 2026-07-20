@@ -1,0 +1,232 @@
+/* ===============================
+   PALETA, TIPOGRAFÍA Y BASE
+   =============================== */
+:root{
+  --accent:#0d6efd;          /* azul Bootstrap */
+  --accent-600:#0b5ed7;
+  --accent-100:#eaf2ff;
+  --ink:#111827;              /* gris muy oscuro para texto */
+  --muted:#6c757d;            /* gris Bootstrap */
+  --border:#e9ecef;           /* gris claro para bordes */
+  --bg:#ffffff;               /* fondo blanco */
+  --chip:#f6f9fc;             /* chip suave */
+  --shadow:0 8px 24px rgba(13,110,253,.08);
+}
+
+* { box-sizing: border-box; }
+html,body { height: 100%; }
+body{
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* enlaces sobrios */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* títulos */
+h1,h2,h3 { letter-spacing:.2px; }
+
+/* utilidades */
+.text-accent{ color: var(--accent) !important; }
+.soft-card{
+  border:1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  background:#fff;
+}
+
+/* ===============================
+   HERO / FOTO
+   =============================== */
+.hero{
+  background:
+    radial-gradient(1200px 400px at 20% -10%, rgba(13,110,253,.06), transparent 60%),
+    linear-gradient(135deg, rgba(13,110,253,.06), rgba(108,117,125,.04));
+  border-bottom:1px solid var(--border);
+}
+.photo-frame{
+  width: 280px; max-width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 2px solid var(--accent-100);
+  box-shadow: 0 12px 32px rgba(13,110,253,.12);
+}
+.photo-frame img{ width:100%; height:100%; object-fit: cover; display:block; }
+
+/* ===============================
+   ACCIONES RÁPIDAS (como tu ejemplo)
+   =============================== */
+.quick-actions{
+  border:1px solid var(--border);
+  border-radius:1rem;
+  background: linear-gradient(180deg,#fff,#fbfdff);
+  box-shadow: var(--shadow);
+}
+.action-btn{
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:.5rem; padding:1rem;
+  height:100%;
+  border-radius:.75rem;
+  border:1px dashed #dbe4f0;
+  background: #fff;
+  color: var(--ink);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease, background .15s ease;
+}
+.action-btn i{ font-size:1.6rem; color:#212529; opacity:.85; }
+.action-btn span{ font-size:.95rem; color:#212529; }
+.action-btn:hover{
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 24px rgba(13,110,253,.18);
+  background: linear-gradient(180deg,#ffffff,#f5f9ff);
+}
+
+/* ===============================
+   EXPERIENCIA LABORAL
+   =============================== */
+.exp-card{ border-radius:1rem; border:1px solid var(--border); box-shadow: var(--shadow); background:#fff; }
+.exp-logo{
+  height:42px; width:auto; object-fit:contain; display:block;
+  opacity:.95; margin-bottom:.25rem;
+}
+
+/* ===============================
+   INGLÉS (escala CEFR)
+   =============================== */
+.cefr-scale{
+  display:flex; gap:.4rem; align-items:center;
+  border:1px solid var(--border); border-radius:.75rem;
+  padding:.35rem .5rem; background:#fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,.03);
+}
+.cefr-scale span{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:40px; height:28px; padding:0 .5rem;
+  border-radius:.5rem; font-size:.85rem; color:#495057;
+  background: var(--chip); border:1px solid #e6edf6;
+}
+.cefr-scale span.active{
+  color:#fff; background: var(--accent); border-color: var(--accent);
+  font-weight:600;
+}
+
+/* ===============================
+   MAPA
+   =============================== */
+.map-embed{
+  width:100%; height:260px; border:0; border-radius:.75rem;
+  box-shadow: 0 6px 18px rgba(13,110,253,.06);
+}
+
+/* ===============================
+   CARRUSEL CERTIFICADOS
+   =============================== */
+.cert-carousel{
+  border:1px solid var(--border);
+  border-radius:1rem;
+  background:#fff;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.cert-carousel .ratio{ overflow:hidden; border-radius:.75rem; }
+
+/* iframes PDF (fallback si no usas height inline) */
+.cert-carousel iframe{
+  width:100%;
+  height:70vh;          /* cómodo en móvil y desktop */
+  border:0;
+  background:#fff;
+}
+@media (max-width: 480px){
+  .cert-carousel iframe{ height:68vh; }
+}
+@media (min-width: 992px){
+  .cert-carousel iframe{ height:72vh; }
+}
+
+/* indicadores */
+.carousel-indicators [data-bs-target]{
+  width:8px; height:8px; border-radius:50%;
+  background:#6c757d; opacity:.55;
+}
+.carousel-indicators .active{ background:var(--accent); opacity:1; }
+
+/* flechas */
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  filter: invert(1) drop-shadow(0 1px 2px rgba(0,0,0,.35));
+}
+.carousel-control-prev,
+.carousel-control-next{ width:9%; }
+
+/* caption: botón ver/descargar */
+.cert-carousel .carousel-caption{
+  bottom: 10px;
+  padding: 0;
+}
+.cert-carousel .carousel-caption .btn{
+  font-size:.85rem; padding:.4rem .75rem; border-radius:.5rem;
+}
+
+/* transición suave */
+.carousel-item{ transition: transform .8s ease-in-out; }
+
+/* ===============================
+   FLECHA BACK-TO-TOP
+   =============================== */
+#btn-top{
+  position: fixed; right: 16px; bottom: 18px;
+  z-index: 1030;
+  width:44px; height:44px; border-radius:999px;
+  display:flex; align-items:center; justify-content:center;
+  background: var(--accent); border:0;
+  box-shadow: 0 12px 28px rgba(13,110,253,.35);
+  transform: translateY(120%); opacity:0; pointer-events:none;
+  transition: transform .25s ease, opacity .25s ease, box-shadow .2s ease;
+  animation: floatUp 2.2s ease-in-out infinite;
+}
+#btn-top i{ font-size:1.2rem; color:#fff; }
+#btn-top.show{ transform: translateY(0); opacity:1; pointer-events:auto; }
+#btn-top:hover{ box-shadow: 0 14px 30px rgba(13,110,253,.45); }
+
+@keyframes floatUp{
+  0%{ transform: translateY(120%) scale(1); }
+  50%{ transform: translateY(120%) scale(1.05); }
+  100%{ transform: translateY(120%) scale(1); }
+}
+
+/* ===============================
+   CHIPS / BADGES SECUNDARIOS
+   =============================== */
+.badge.text-bg-secondary{
+  background: var(--chip) !important;
+  color:#334155 !important;
+  border:1px solid #e5edf7;
+  font-weight:500;
+}
+
+/* ===============================
+   RESPONSIVE AJUSTES
+   =============================== */
+@media (max-width: 576px){
+  .photo-frame{ width: 220px; }
+  .action-btn i{ font-size:1.4rem; }
+  .action-btn{ padding:.85rem; }
+}
+
+/* ===============================
+   PRINT (para exportar a PDF)
+   =============================== */
+@media print{
+  #btn-top, .quick-actions, .carousel-indicators,
+  .carousel-control-prev, .carousel-control-next { display:none !important; }
+  .soft-card, .exp-card, .cert-carousel{
+    box-shadow:none !important; border:1px solid #ccc !important;
+  }
+  .map-embed{ height:180px !important; }
+  .cert-carousel iframe{ height:480px !important; }
+}
